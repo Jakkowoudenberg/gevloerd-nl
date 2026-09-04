@@ -196,6 +196,12 @@ a.km:hover{border-color:var(--ink);transform:translateY(-2px)}
 .foot a{color:var(--ink-soft);text-decoration:none}
 .foot a:hover{color:var(--ink)}
 .foot .creds-line{max-width:60ch}
+.foot-right{display:flex;align-items:center;gap:14px 22px;flex-wrap:wrap;justify-content:flex-end}
+.share-btn{display:inline-flex;align-items:center;gap:.5em;background:none;border:1px solid var(--line);color:var(--ink-soft);font:inherit;font-size:.88rem;padding:.55em .95em;border-radius:40px;cursor:pointer;transition:border-color .2s,color .2s,transform .2s}
+.share-btn:hover{border-color:var(--ink);color:var(--ink);transform:translateY(-1px)}
+.share-btn svg{width:1.05em;height:1.05em}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(20px);background:var(--ink);color:var(--paper);padding:.7em 1.1em;border-radius:6px;font-size:.9rem;opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;z-index:60}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
 
 /* ---------- Mobiele vaste WhatsApp ---------- */
 .wa-fab{position:fixed;right:16px;bottom:16px;z-index:50;display:none;align-items:center;gap:.5em;
@@ -452,7 +458,11 @@ a.km:hover{border-color:var(--ink);transform:translateY(-2px)}
   <div class="wrap">
     <div><a class="brand" href="#top" style="font-size:1.05rem;text-decoration:none">Gevloerd<b>.nl</b></a>
       &nbsp;·&nbsp; Schagen, Noord-Holland &nbsp;·&nbsp; KvK 51624842</div>
-    <div class="creds-line">Meesterparketteur · Lid van het Gilde van Gediplomeerde Parketteurs · VLOK · Bona Gecertificeerd Vakman</div>
+    <div class="foot-right"><span class="creds-line">Meesterparketteur · Lid van het Gilde van Gediplomeerde Parketteurs · VLOK · Bona Gecertificeerd Vakman</span>
+      <button class="share-btn" type="button" aria-label="Deel deze site">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg>
+        Deel deze site
+      </button></div>
   </div>
 </footer>
 
@@ -493,6 +503,20 @@ var WA_TEKST = "Hoi Jakko, ik heb een vraag over mijn houten vloer.";
     var addr = a.dataset.user+"@"+a.dataset.domain;
     a.href = "mailto:"+addr;
   });
+})();
+</script>
+<script>
+(function(){
+  var URL_="https://gevloerd.nl/";
+  var TITLE="Gevloerd.nl — Meesterparketteur in Schagen";
+  var TEXT="Houten vloeren: vakkundig gelegd, gerenoveerd en hersteld.";
+  var btn=document.querySelector('.share-btn'), toast;
+  function say(m){ if(!toast){toast=document.createElement('div');toast.className='toast';document.body.appendChild(toast);} toast.textContent=m; toast.classList.add('show'); setTimeout(function(){toast.classList.remove('show');},1900); }
+  if(btn){ btn.addEventListener('click',function(){
+    if(navigator.share){ navigator.share({title:TITLE,text:TEXT,url:URL_}).catch(function(){}); }
+    else if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(URL_).then(function(){say('Link gekopieerd');},function(){say(URL_);}); }
+    else { say(URL_); }
+  }); }
 })();
 </script>
 </body>
