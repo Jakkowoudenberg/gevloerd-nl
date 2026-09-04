@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- ============================================================
+     GEVLOERD.NL — one-page website
+     Vakman: Jakko Woudenberg · Schagen, Noord-Holland
+     ------------------------------------------------------------
+     EENVOUDIG AAN TE PASSEN (zoek op "AANPASSEN:")
+       • Telefoon / WhatsApp  → zoek: AANPASSEN: CONTACT
+       • Foto's               → zoek: AANPASSEN: FOTO
+       • Teksten              → gewoon in de HTML hieronder
+       • KvK / e-mail         → zoek: AANPASSEN: BEDRIJFSGEGEVENS
+     ============================================================ -->
+
+<title>Gevloerd.nl — Meesterparketteur in Schagen | houten vloeren, renovatie & reparatie</title>
+<meta name="description" content="Gevloerd.nl — Jakko Woudenberg, Meesterparketteur in Schagen. Al 28 jaar houten vloeren leggen, stofvrij schuren, renoveren, restaureren en repareren. Stuur foto's via WhatsApp voor een vrijblijvende inschatting.">
+<link rel="canonical" href="https://gevloerd.nl/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#221E19">
+
+<!-- Open Graph / social -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Gevloerd.nl">
+<meta property="og:locale" content="nl_NL">
+<meta property="og:title" content="Gevloerd.nl — Meesterparketteur in Schagen">
+<meta property="og:description" content="Al 28 jaar houten vloeren leggen, schuren, renoveren en repareren. Meesterparketteur in Schagen. Stuur foto's via WhatsApp.">
+<meta property="og:url" content="https://gevloerd.nl/">
+<!-- AANPASSEN: FOTO — social preview beeld (1200×630). Plaats images/og-cover.jpg -->
+<meta property="og:image" content="https://gevloerd.nl/images/og-cover.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- Font: Spectral (koppen). Body draait op systeemletters = snel. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --paper:#F7F5F1;        /* krijtwit, iets koeler dan crème */
+  --paper-2:#EEEAE2;      /* zandsteen, sectietint */
+  --ink:#221E19;          /* warm oud-eiken donker */
+  --ink-soft:#6A6157;     /* gedempte tekst */
+  --line:#DCD5C9;         /* haarlijn */
+  --accent:#7A5A34;       /* olie-amber, spaarzaam */
+  --wa:#1F7A54;           /* gedempt whatsapp-groen, alleen als glyph-tint */
+  --maxw:1200px;
+  --gap:clamp(64px,9vw,140px);
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-size:clamp(16px,1.05vw,18px);
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+
+h1,h2,h3{font-family:"Spectral",Georgia,"Times New Roman",serif;font-weight:400;letter-spacing:-.01em;margin:0}
+p{margin:0 0 1.1em}
+a{color:inherit}
+
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 clamp(22px,5vw,64px)}
+.lead{color:var(--ink-soft);max-width:60ch}
+.eyebrow{font-size:.82rem;letter-spacing:.02em;color:var(--accent);margin:0 0 1.1rem;font-weight:600}
+.section{padding:var(--gap) 0}
+.rule{height:1px;background:var(--line);border:0;margin:0}
+
+/* ---------- Nav ---------- */
+.nav{position:sticky;top:0;z-index:40;background:rgba(247,245,241,.86);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:66px}
+.brand{font-family:"Spectral",serif;font-size:1.32rem;letter-spacing:.01em;text-decoration:none}
+.brand b{font-weight:500}
+.nav-links{display:flex;align-items:center;gap:clamp(18px,2.4vw,36px)}
+.nav-links a{text-decoration:none;color:var(--ink-soft);font-size:.95rem;transition:color .2s}
+.nav-links a:hover{color:var(--ink)}
+.nav-links .navlist{display:flex;gap:26px}
+@media(max-width:760px){.nav-links .navlist{display:none}}
+
+/* ---------- Buttons ---------- */
+.btn{display:inline-flex;align-items:center;gap:.55em;text-decoration:none;font-size:1rem;line-height:1;
+  padding:.95em 1.5em;border-radius:2px;transition:transform .18s ease,background .2s,border-color .2s;white-space:nowrap}
+.btn svg{width:1.05em;height:1.05em;flex:none}
+.btn-primary{background:var(--ink);color:var(--paper)}
+.btn-primary:hover{transform:translateY(-2px)}
+.btn-ghost{border:1px solid var(--ink);color:var(--ink)}
+.btn-ghost:hover{background:var(--ink);color:var(--paper)}
+.btn-sm{padding:.62em .95em;font-size:.92rem}
+.cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:2rem}
+
+/* ---------- Photo placeholders ---------- */
+/* AANPASSEN: FOTO — vervang elk <div class="ph ..."> door:
+   <img src="images/BESTAND.webp" alt="Beschrijvende alt-tekst" loading="lazy" decoding="async" width="1600" height="1200">
+   (hero-beeld: laat 'loading="lazy"' weg voor snelle eerste weergave) */
+.ph{position:relative;width:100%;border:1px solid var(--line);border-radius:2px;overflow:hidden;
+  background:
+    repeating-linear-gradient(115deg, transparent 0 22px, rgba(122,90,52,.05) 22px 23px),
+    var(--paper-2);
+  display:grid;place-items:center;color:var(--ink-soft)}
+.ph::after{content:attr(data-label);font-size:.8rem;letter-spacing:.04em;opacity:.7}
+.ph.r-hero{aspect-ratio:16/10}
+.ph.r-tall{aspect-ratio:4/5}
+.ph.r-wide{aspect-ratio:21/9}
+.ph.r-sq{aspect-ratio:1/1}
+.ph.r-land{aspect-ratio:3/2}
+img.media{display:block;width:100%;height:auto;border-radius:2px}
+
+/* ---------- Hero ---------- */
+.hero{padding-top:clamp(48px,7vw,96px)}
+.hero h1{font-size:clamp(2.5rem,6.4vw,5.1rem);line-height:1.02;font-weight:300;max-width:16ch}
+.hero h1 .sub{display:block;font-size:.5em;color:var(--ink-soft);font-weight:300;line-height:1.15;margin-top:.5rem;max-width:22ch}
+.hero-intro{margin-top:2rem;max-width:52ch;font-size:clamp(1.05rem,1.4vw,1.22rem)}
+.hero-meta{margin-top:2.4rem;color:var(--ink-soft);font-size:.98rem;max-width:60ch}
+.hero-fig{margin:clamp(48px,7vw,88px) 0 0}
+.reveal{opacity:0;transform:translateY(14px);animation:rise .9s cubic-bezier(.2,.7,.2,1) forwards}
+.reveal.d1{animation-delay:.05s}.reveal.d2{animation-delay:.16s}.reveal.d3{animation-delay:.27s}.reveal.d4{animation-delay:.38s}
+@keyframes rise{to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;animation:none}}
+
+/* ---------- Split sections ---------- */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(34px,5vw,80px);align-items:center}
+.split.rev{direction:rtl}.split.rev>*{direction:ltr}
+@media(max-width:860px){.split{grid-template-columns:1fr;gap:34px}.split.rev{direction:ltr}}
+.worklist{list-style:none;margin:1.6rem 0 0;padding:0;max-width:48ch}
+.worklist li{padding:.72rem 0;border-top:1px solid var(--line);color:var(--ink)}
+.worklist li:last-child{border-bottom:1px solid var(--line)}
+
+/* ---------- Vakmanschap ---------- */
+.craft{background:var(--paper-2)}
+.craft .big{font-size:clamp(3.4rem,10vw,7.5rem);font-weight:300;line-height:.92;letter-spacing:-.02em}
+.craft .big em{font-style:normal;color:var(--accent)}
+.pull{font-family:"Spectral",serif;font-weight:300;font-size:clamp(1.5rem,3.2vw,2.35rem);line-height:1.25;
+  max-width:24ch;margin:2.2rem 0 0}
+.creds{display:flex;flex-wrap:wrap;gap:clamp(20px,3vw,48px);margin-top:clamp(40px,6vw,72px);
+  padding-top:clamp(28px,4vw,44px);border-top:1px solid var(--line)}
+.cred{display:flex;align-items:center;gap:14px;min-width:200px}
+.cred .logo{width:52px;height:52px;flex:none;border:1px solid var(--line);border-radius:2px;background:var(--paper);
+  display:grid;place-items:center;font-size:.58rem;color:var(--ink-soft);text-align:center;line-height:1.05;padding:4px}
+/* AANPASSEN: FOTO — vervang .logo-div door <img src="images/keurmerk-x.svg" alt="..." width="52" height="52"> */
+.cred .t{font-size:.96rem;line-height:1.3}
+.cred .t b{font-weight:600}
+.cred .t span{display:block;color:var(--ink-soft);font-size:.86rem}
+
+/* ---------- Gerealiseerd werk ---------- */
+.gallery{display:grid;gap:clamp(16px,2vw,26px);grid-template-columns:1fr 1fr}
+.gallery .full{grid-column:1 / -1}
+@media(max-width:700px){.gallery{grid-template-columns:1fr}}
+.cap{margin:.7rem 0 0;font-size:.85rem;color:var(--ink-soft)}
+
+/* ---------- Contact ---------- */
+.contact{background:var(--ink);color:var(--paper)}
+.contact h2{color:var(--paper)}
+.contact .lead{color:#CFC7B9}
+.contact a.mail{color:var(--paper);text-decoration:underline;text-underline-offset:3px}
+.contact .btn-ghost{border-color:var(--paper);color:var(--paper)}
+.contact .btn-ghost:hover{background:var(--paper);color:var(--ink)}
+.contact .btn-primary{background:var(--paper);color:var(--ink)}
+.facts{margin-top:clamp(44px,6vw,72px);padding-top:clamp(26px,4vw,40px);border-top:1px solid rgba(247,245,241,.18);
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:22px 40px;color:#CFC7B9;font-size:.95rem}
+.facts b{display:block;color:var(--paper);font-weight:500;margin-bottom:.15rem}
+
+/* ---------- Footer ---------- */
+.foot{padding:44px 0;font-size:.88rem;color:var(--ink-soft)}
+.foot .wrap{display:flex;flex-wrap:wrap;gap:8px 26px;align-items:center;justify-content:space-between}
+.foot a{color:var(--ink-soft);text-decoration:none}
+.foot a:hover{color:var(--ink)}
+.foot .creds-line{max-width:60ch}
+
+/* ---------- Mobiele vaste WhatsApp ---------- */
+.wa-fab{position:fixed;right:16px;bottom:16px;z-index:50;display:none;align-items:center;gap:.5em;
+  background:var(--ink);color:var(--paper);text-decoration:none;padding:.8em 1.05em;border-radius:40px;
+  box-shadow:0 6px 22px rgba(34,30,25,.28);font-size:.95rem}
+.wa-fab svg{width:1.15em;height:1.15em}
+@media(max-width:760px){.wa-fab{display:inline-flex}}
+</style>
+
+<!-- ============================================================
+     JSON-LD — alleen geverifieerde gegevens.
+     Telefoon bewust weggelaten tot bevestigd (GOK NOOIT).
+     ============================================================ -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":["LocalBusiness","ProfessionalService","HomeAndConstructionBusiness"],
+  "name":"Gevloerd.nl",
+  "description":"Meesterparketteur in Schagen. Houten vloeren leggen, stofvrij schuren, renoveren, restaureren en repareren. 28 jaar ervaring.",
+  "url":"https://gevloerd.nl/",
+  "email":"gevloerd.nl@gmail.com",
+  "image":"https://gevloerd.nl/images/og-cover.jpg",
+  "founder":{"@type":"Person","name":"Jakko Woudenberg","jobTitle":"Meesterparketteur"},
+  "foundingDate":"1998",
+  "identifier":{"@type":"PropertyValue","name":"KvK","value":"51624842"},
+  "address":{"@type":"PostalAddress","addressLocality":"Schagen","addressRegion":"Noord-Holland","addressCountry":"NL"},
+  "areaServed":["Schagen","Alkmaar","Heerhugowaard","Heiloo","Hoorn","Bergen","West-Friesland","Noordkop","Texel"],
+  "knowsAbout":["parket","houten vloeren","visgraat","Hongaarse punt","vloerrenovatie","stofvrij schuren","vloerrestauratie","vloerreparatie"],
+  "telephone":"+31624225292",
+  "sameAs":["https://www.facebook.com/gevloerd/"]
+  /* AANPASSEN: CONTACT — na bevestiging toevoegen: "telephone":"+31XXXXXXXXX" */
+}
+</script>
+</head>
+
+<body>
+
+<!-- ================= NAV ================= -->
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top">Gevloerd<b>.nl</b></a>
+    <nav class="nav-links" aria-label="Hoofdmenu">
+      <span class="navlist">
+        <a href="#werk">Werk</a>
+        <a href="#vakmanschap">Vakmanschap</a>
+        <a href="#contact">Contact</a>
+      </span>
+      <!-- AANPASSEN: CONTACT — tel:-nummer invullen -->
+      <a class="btn btn-ghost btn-sm" href="tel:+31624225292" data-tel>Bel</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ================= HERO ================= -->
+<section class="section hero">
+  <div class="wrap">
+    <h1 class="reveal d1">Houten vloeren.
+      <span class="sub">Vakkundig gelegd, gerenoveerd en hersteld.</span>
+    </h1>
+    <p class="hero-intro reveal d2">Al 28 jaar werk ik met houten vloeren. Van het leggen van een nieuwe
+      parketvloer tot het volledig renoveren van een bestaande vloer. Geen onnodig ingewikkeld verhaal —
+      gewoon goed kijken naar wat een vloer nodig heeft en zorgen dat het klopt.</p>
+
+    <div class="cta-row reveal d3">
+      <!-- AANPASSEN: CONTACT — WhatsApp-nummer in data-wa (formaat: 316XXXXXXXX, zonder + of spaties) -->
+      <a class="btn btn-primary" data-wa href="#contact">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.7-.8-1.9-.9-.3-.1-.5-.2-.7.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-1.6-.8-2.6-1.4-3.7-3.2-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.3 5.1 4.6 1.9.8 2.6.9 3.5.8.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15l-1.3 4.9 5-1.3A10 10 0 1 0 12 2z"/></svg>
+        Stuur foto's via WhatsApp
+      </a>
+      <a class="btn btn-ghost" href="tel:+31624225292" data-tel>Bel direct</a>
+    </div>
+
+    <p class="hero-meta reveal d3">Meesterparketteur in Schagen. Werkzaam in de hele Noordkop en
+      West-Friesland — voor nieuwe vloeren, renovatie en reparatie.</p>
+
+    <figure class="hero-fig reveal d4" style="margin-block-end:0">
+      <!-- AANPASSEN: FOTO — HERO. Groot projectbeeld. Vervang div door <img class="media" ... ZONDER loading="lazy"> -->
+      <div class="ph r-hero" data-label="Hero — groot projectbeeld volgt"></div>
+    </figure>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- ================= PARKET & HOUTEN VLOEREN ================= -->
+<section class="section" id="werk">
+  <div class="wrap">
+    <div class="split rev">
+      <figure style="margin:0">
+        <!-- AANPASSEN: FOTO — detail hout / gelegde vloer (staand) -->
+        <div class="ph r-tall" data-label="Detailbeeld hout volgt"></div>
+      </figure>
+      <div>
+        <p class="eyebrow">Nieuw &amp; maatwerk</p>
+        <h2 style="font-size:clamp(1.9rem,3.6vw,2.9rem)">Parket &amp; houten vloeren</h2>
+        <p class="lead" style="margin-top:1.2rem">Een houten vloer moet niet alleen mooi zijn wanneer hij net
+          gelegd is. Hij moet technisch goed opgebouwd zijn en jarenlang meegaan.</p>
+        <ul class="worklist">
+          <li>Nieuwe houten vloeren en parket</li>
+          <li>Visgraat en Hongaarse punt</li>
+          <li>Traditioneel parket</li>
+          <li>Maatwerk en bijzondere patronen</li>
+          <li>Plinten en afwerking</li>
+          <li>Advies over houtsoort, patroon en afwerking</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= RENOVATIE & REPARATIE ================= -->
+<section class="section">
+  <div class="wrap">
+    <div class="split">
+      <div>
+        <p class="eyebrow">Herstel &amp; onderhoud</p>
+        <h2 style="font-size:clamp(1.9rem,3.6vw,2.9rem)">Vloerrenovatie &amp; reparatie</h2>
+        <p class="lead" style="margin-top:1.2rem">Een bestaande houten vloer kan vaak volledig worden hersteld
+          zonder hem te vervangen. Door professioneel en <strong>stofvrij</strong> te schuren en opnieuw af te
+          werken, verdwijnen beschadigingen, slijtage en oude afwerklagen en krijgt het hout zijn uitstraling terug.</p>
+        <ul class="worklist">
+          <li>Stofvrij schuren van houten vloeren</li>
+          <li>Opnieuw oliën of lakken</li>
+          <li>Kleur aanpassen</li>
+          <li>Beschadigingen herstellen</li>
+          <li>Plaatselijk repareren of vervangen</li>
+          <li>Oude parketvloeren restaureren</li>
+        </ul>
+        <p style="margin-top:1.6rem;max-width:52ch">Niet iedere vloer hoeft eruit wanneer er iets misgaat.
+          Losliggende delen, kieren of plaatselijke slijtage kunnen vaak gericht worden hersteld. Met 28 jaar
+          ervaring beoordeel ik meestal snel wat er speelt en welke oplossing technisch én financieel verstandig is.</p>
+      </div>
+      <figure style="margin:0">
+        <!-- AANPASSEN: FOTO — voor/na of sterke renovatiefoto (staand) -->
+        <div class="ph r-tall" data-label="Renovatie / voor–na volgt"></div>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- ================= VAKMANSCHAP ================= -->
+<section class="section craft" id="vakmanschap">
+  <div class="wrap">
+    <p class="eyebrow">Sinds 1998</p>
+    <div class="big"><em>28</em> jaar ervaring<br>met houten vloeren</div>
+
+    <div style="max-width:56ch;margin-top:2.4rem">
+      <p>Sinds 1998 werk ik professioneel met parket en houten vloeren. In die jaren heb ik alles voorbij zien
+        komen: van renovaties en herstelwerk tot complexe maatwerkvloeren en bijzondere patronen.</p>
+      <p>Die ervaring betekent dat ik niet alleen kijk naar hoe een vloer eruitziet, maar ook naar de ondervloer,
+        de constructie, de houtwerking en de afwerking.</p>
+    </div>
+
+    <p class="pull">Een mooie vloer begint bij wat je uiteindelijk niet meer ziet.</p>
+
+    <!-- Keurmerken — klein en rustig. AANPASSEN: FOTO — vervang .logo-div door officiële logo's zodra beschikbaar -->
+    <div class="creds">
+      <div class="cred">
+        <span class="logo">Meester&shy;parketteur</span>
+        <span class="t"><b>Meesterparketteur</b><span>Gediplomeerd &amp; erkend</span></span>
+      </div>
+      <div class="cred">
+        <span class="logo">Gilde</span>
+        <span class="t"><b>Nederlands Gilde van Parketteurs</b><span>Lid</span></span>
+      </div>
+      <div class="cred">
+        <span class="logo">VLOK</span>
+        <span class="t"><b>VLOK</b><span>Heldere consumentenvoorwaarden</span></span>
+      </div>
+      <div class="cred">
+        <span class="logo">Bona</span>
+        <span class="t"><b>Bona Gecertificeerd Vakman</b><span>Erkende afwerking</span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- ================= GEREALISEERD WERK ================= -->
+<section class="section">
+  <div class="wrap">
+    <p class="eyebrow">Een selectie</p>
+    <h2 style="font-size:clamp(1.9rem,3.6vw,2.9rem);max-width:16ch">Gerealiseerd werk</h2>
+    <div class="gallery" style="margin-top:clamp(32px,5vw,56px)">
+      <!-- AANPASSEN: FOTO — 4 sterke beelden. Vervang elke div door <img class="media" ...> -->
+      <figure class="full" style="margin:0">
+        <div class="ph r-wide" data-label="Groot beeld — volledige breedte"></div>
+      </figure>
+      <figure style="margin:0"><div class="ph r-land" data-label="Beeld links"></div></figure>
+      <figure style="margin:0"><div class="ph r-land" data-label="Beeld rechts"></div></figure>
+      <figure class="full" style="margin:0">
+        <div class="ph r-wide" data-label="Groot detailbeeld"></div>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="section contact" id="contact">
+  <div class="wrap">
+    <h2 style="font-size:clamp(2rem,4.4vw,3.4rem);max-width:18ch">Is uw houten vloer toe aan renovatie?</h2>
+    <p class="lead" style="margin-top:1.4rem;font-size:clamp(1.05rem,1.4vw,1.2rem)">
+      Stuur eenvoudig een paar foto's van de vloer via WhatsApp. Vertel erbij wat u wilt laten doen en, indien
+      bekend, om hoeveel vierkante meter het gaat. Dan geef ik vaak al een eerste inschatting van de mogelijkheden.</p>
+
+    <div class="cta-row">
+      <a class="btn btn-primary" data-wa href="#contact">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.7-.8-1.9-.9-.3-.1-.5-.2-.7.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-1.6-.8-2.6-1.4-3.7-3.2-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.3 5.1 4.6 1.9.8 2.6.9 3.5.8.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15l-1.3 4.9 5-1.3A10 10 0 1 0 12 2z"/></svg>
+        Stuur foto's via WhatsApp
+      </a>
+      <a class="btn btn-ghost" href="tel:+31624225292" data-tel>Bel direct</a>
+    </div>
+
+    <p style="margin-top:1.8rem;color:#CFC7B9">Liever mailen? Dat kan via
+      <a class="mail" data-user="gevloerd.nl" data-domain="gmail.com" href="#">gevloerd.nl@gmail.com</a>.
+      <noscript> (gevloerd.nl [at] gmail [dot] com)</noscript>
+    </p>
+
+    <!-- AANPASSEN: BEDRIJFSGEGEVENS -->
+    <div class="facts">
+      <div><b>Vakman</b>Jakko Woudenberg</div>
+      <div><b>Vestiging</b>Schagen, Noord-Holland</div>
+      <div><b>KvK</b>51624842</div>
+      <div><b>E-mail</b><a class="mail" data-user="gevloerd.nl" data-domain="gmail.com" href="#" style="color:#CFC7B9;text-decoration:underline">gevloerd.nl@gmail.com</a></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="foot">
+  <div class="wrap">
+    <div><a class="brand" href="#top" style="font-size:1.05rem;text-decoration:none">Gevloerd<b>.nl</b></a>
+      &nbsp;·&nbsp; Schagen, Noord-Holland &nbsp;·&nbsp; KvK 51624842</div>
+    <div class="creds-line">Meesterparketteur · Lid Gilde van Parketteurs · VLOK · Bona Gecertificeerd Vakman</div>
+  </div>
+</footer>
+
+<!-- ================= Vaste mobiele WhatsApp ================= -->
+<a class="wa-fab" data-wa href="#contact" aria-label="Stuur foto's via WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.7-.8-1.9-.9-.3-.1-.5-.2-.7.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-1.6-.8-2.6-1.4-3.7-3.2-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.3 5.1 4.6 1.9.8 2.6.9 3.5.8.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15l-1.3 4.9 5-1.3A10 10 0 1 0 12 2z"/></svg>
+  WhatsApp
+</a>
+
+<script>
+/* ============================================================
+   AANPASSEN: CONTACT — vul hier de actuele nummers in.
+   WHATSAPP: internationaal formaat zonder + of spaties, bv "31612345678"
+   TELEFOON: bv "+31226752074"
+   Laat leeg ("") om de knoppen te verbergen tot je ze hebt.
+   ============================================================ */
+var WHATSAPP = "31624225292";                 // <-- WhatsApp-nummer hier
+var TELEFOON = "+31624225292";                 // <-- Telefoonnummer hier
+var WA_TEKST = "Hoi Jakko, ik heb een vraag over mijn houten vloer.";
+
+(function(){
+  // WhatsApp-knoppen
+  var waLinks = document.querySelectorAll('[data-wa]');
+  waLinks.forEach(function(a){
+    if(WHATSAPP){
+      a.href = "https://wa.me/"+WHATSAPP+"?text="+encodeURIComponent(WA_TEKST);
+      a.target = "_blank"; a.rel = "noopener";
+    }
+  });
+  // Telefoon-knoppen
+  var telLinks = document.querySelectorAll('[data-tel]');
+  telLinks.forEach(function(a){
+    if(TELEFOON){ a.href = "tel:"+TELEFOON.replace(/\s/g,''); }
+    else { a.style.display='none'; }   // verberg tot nummer bekend is
+  });
+  // E-mail: licht beschermd tegen simpele harvesters, blijft leesbaar
+  document.querySelectorAll('a.mail').forEach(function(a){
+    var addr = a.dataset.user+"@"+a.dataset.domain;
+    a.href = "mailto:"+addr;
+  });
+})();
+</script>
+</body>
+</html>

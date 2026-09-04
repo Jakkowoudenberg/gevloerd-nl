@@ -1,0 +1,5 @@
+# Gevloerd.nl — alle legitieme zoekmachines en AI-crawlers toegestaan
+User-agent: *
+Allow: /
+
+Sitemap: https://gevloerd.nl/sitemap.xml
