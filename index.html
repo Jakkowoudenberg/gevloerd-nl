@@ -112,6 +112,11 @@ a{color:inherit}
 .ph.r-wide{aspect-ratio:21/9}
 .ph.r-sq{aspect-ratio:1/1}
 .ph.r-land{aspect-ratio:3/2}
+.shot{display:block;width:100%;height:auto;object-fit:cover;border:1px solid var(--line);border-radius:2px}
+.shot.r-tall{aspect-ratio:4/5}
+.shot.r-wide{aspect-ratio:21/9}
+.shot.r-land{aspect-ratio:3/2}
+.shot.r-sq{aspect-ratio:1/1}
 img.media{display:block;width:100%;height:auto;border-radius:2px}
 
 /* ---------- Hero ---------- */
@@ -273,8 +278,12 @@ img.media{display:block;width:100%;height:auto;border-radius:2px}
   <div class="wrap">
     <div class="split rev">
       <figure style="margin:0">
-        <!-- AANPASSEN: FOTO — detail hout / gelegde vloer (staand) -->
-        <div class="ph r-tall" data-label="Detailbeeld hout volgt"></div>
+        <picture>
+          <source srcset="images/werk-maatwerk.webp" type="image/webp">
+          <img class="shot r-tall" src="images/werk-maatwerk.jpg" loading="lazy" decoding="async"
+               width="1200" height="1800"
+               alt="Maatwerk parketvloer met geometrisch patroon in een zaal met vleugel">
+        </picture>
       </figure>
       <div>
         <p class="eyebrow">Nieuw &amp; maatwerk</p>
