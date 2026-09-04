@@ -209,6 +209,10 @@ a.km:hover{border-color:var(--ink);transform:translateY(-2px)}
   box-shadow:0 6px 22px rgba(34,30,25,.28);font-size:.95rem}
 .wa-fab svg{width:1.15em;height:1.15em}
 @media(max-width:760px){.wa-fab{display:inline-flex}}
+.share-fab{position:fixed;left:16px;bottom:16px;z-index:50;display:none;align-items:center;gap:.5em;background:var(--paper);color:var(--ink);border:1px solid var(--line);box-shadow:0 6px 22px rgba(34,30,25,.18);padding:.8em 1.05em;border-radius:40px;font-size:.95rem}
+.share-fab svg{width:1.1em;height:1.1em}
+.share-fab:hover{transform:none;border-color:var(--line);color:var(--ink)}
+@media(max-width:760px){.share-fab{display:inline-flex}.foot-right .share-btn{display:none}}
 </style>
 
 <!-- ============================================================
@@ -471,6 +475,10 @@ a.km:hover{border-color:var(--ink);transform:translateY(-2px)}
   <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.7-.8-1.9-.9-.3-.1-.5-.2-.7.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-1.6-.8-2.6-1.4-3.7-3.2-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.3 5.1 4.6 1.9.8 2.6.9 3.5.8.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15l-1.3 4.9 5-1.3A10 10 0 1 0 12 2z"/></svg>
   WhatsApp
 </a>
+<button class="share-btn share-fab" type="button" aria-label="Deel deze site">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg>
+  Deel
+</button>
 
 <script>
 /* ============================================================
@@ -510,13 +518,14 @@ var WA_TEKST = "Hoi Jakko, ik heb een vraag over mijn houten vloer.";
   var URL_="https://gevloerd.nl/";
   var TITLE="Gevloerd.nl — Meesterparketteur in Schagen";
   var TEXT="Houten vloeren: vakkundig gelegd, gerenoveerd en hersteld.";
-  var btn=document.querySelector('.share-btn'), toast;
+  var btns=document.querySelectorAll('.share-btn'), toast;
   function say(m){ if(!toast){toast=document.createElement('div');toast.className='toast';document.body.appendChild(toast);} toast.textContent=m; toast.classList.add('show'); setTimeout(function(){toast.classList.remove('show');},1900); }
-  if(btn){ btn.addEventListener('click',function(){
+  function doShare(){
     if(navigator.share){ navigator.share({title:TITLE,text:TEXT,url:URL_}).catch(function(){}); }
     else if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(URL_).then(function(){say('Link gekopieerd');},function(){say(URL_);}); }
     else { say(URL_); }
-  }); }
+  }
+  btns.forEach(function(b){ b.addEventListener('click',doShare); });
 })();
 </script>
 </body>
