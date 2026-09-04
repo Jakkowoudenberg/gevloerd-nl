@@ -121,6 +121,9 @@ a{color:inherit}
 .feature{margin:0 auto;max-width:640px}
 .pair{display:grid;grid-template-columns:1fr 1fr;gap:clamp(16px,2vw,26px);margin-top:clamp(28px,4vw,48px)}
 @media(max-width:700px){.pair{grid-template-columns:1fr}}
+.masonry{columns:2;column-gap:clamp(16px,2vw,26px);margin-top:clamp(32px,5vw,56px)}
+.masonry .mfig{margin:0 0 clamp(16px,2vw,26px);break-inside:avoid}
+@media(max-width:700px){.masonry{columns:1}}
 img.media{display:block;width:100%;height:auto;border-radius:2px}
 
 /* ---------- Hero ---------- */
@@ -387,26 +390,32 @@ img.media{display:block;width:100%;height:auto;border-radius:2px}
   <div class="wrap">
     <p class="eyebrow">Een greep uit het werk</p>
     <h2 style="font-size:clamp(1.9rem,3.6vw,2.9rem);max-width:16ch">Werk in beeld</h2>
-    <figure class="feature" style="margin:clamp(32px,5vw,56px) auto 0">
-      <picture><source srcset="images/kunsttafel.webp" type="image/webp">
-        <img class="shot" src="images/kunsttafel.jpg" loading="lazy" decoding="async" width="1000" height="1000"
-             alt="Ronde kunsttafel met radiaal houtinlegpatroon in meerdere houtsoorten"></picture>
-      <figcaption class="cap" style="text-align:center">Kunsttafel</figcaption>
-    </figure>
-
-    <div class="pair">
-      <figure style="margin:0">
-        <picture><source srcset="images/werk-domotex-1.webp" type="image/webp">
-          <img class="shot r-43" src="images/werk-domotex-1.jpg" loading="lazy" decoding="async" width="1400" height="1050"
-               alt="Jakko Woudenberg met een houten kunstwerk met hart-inleg op Workcamp Parquet, Domotex Hannover 2020"></picture>
+    <div class="masonry">
+      <figure class="mfig">
+        <picture><source srcset="images/kunsttafel.webp" type="image/webp">
+          <img class="shot" src="images/kunsttafel.jpg" loading="lazy" decoding="async" width="1000" height="1000"
+               alt="Ronde kunsttafel met radiaal houtinlegpatroon in meerdere houtsoorten"></picture>
+        <figcaption class="cap">Kunsttafel</figcaption>
       </figure>
-      <figure style="margin:0">
+      <figure class="mfig">
+        <picture><source srcset="images/werk-noten.webp" type="image/webp">
+          <img class="shot" src="images/werk-noten.jpg" loading="lazy" decoding="async" width="1000" height="1778"
+               alt="Vloer in notenhout in blokpatroon met wisselende nerfrichting, in een moderne ruimte met stalen puien"></picture>
+        <figcaption class="cap">Noten blokpatroon</figcaption>
+      </figure>
+      <figure class="mfig">
+        <picture><source srcset="images/werk-domotex-1.webp" type="image/webp">
+          <img class="shot" src="images/werk-domotex-1.jpg" loading="lazy" decoding="async" width="1400" height="1050"
+               alt="Jakko Woudenberg met een houten kunstwerk met hart-inleg op Workcamp Parquet, Domotex Hannover 2020"></picture>
+        <figcaption class="cap">Workcamp Parquet — Domotex, Hannover 2020</figcaption>
+      </figure>
+      <figure class="mfig">
         <picture><source srcset="images/werk-domotex-2.webp" type="image/webp">
-          <img class="shot r-43" src="images/werk-domotex-2.jpg" loading="lazy" decoding="async" width="1400" height="1050"
+          <img class="shot" src="images/werk-domotex-2.jpg" loading="lazy" decoding="async" width="1400" height="1050"
                alt="Team van Workcamp Parquet met het houten hart-kunstwerk, Domotex Hannover 2020"></picture>
+        <figcaption class="cap">Workcamp Parquet — het team, Hannover 2020</figcaption>
       </figure>
     </div>
-    <p class="cap" style="margin-top:1rem">Workcamp Parquet — Domotex, Hannover 2020</p>
   </div>
 </section>
 
