@@ -164,6 +164,11 @@ img.media{display:block;width:100%;height:auto;border-radius:2px}
 .cred .t{font-size:.96rem;line-height:1.3}
 .cred .t b{font-weight:600}
 .cred .t span{display:block;color:var(--ink-soft);font-size:.86rem}
+.km-intro{border-top:1px solid var(--line);padding-top:clamp(28px,4vw,44px);margin:clamp(40px,6vw,72px) 0 1.2rem;color:var(--ink-soft);font-size:.95rem}
+.keurmerken{display:flex;flex-wrap:wrap;gap:14px;align-items:stretch}
+.km{background:#fff;border:1px solid var(--line);border-radius:3px;height:86px;padding:12px 18px;display:flex;align-items:center;justify-content:center}
+.km img{max-height:56px;max-width:180px;width:auto;height:auto;display:block}
+.km-ph{color:var(--ink-soft);font-size:.9rem;text-align:center;max-width:150px;line-height:1.25}
 
 /* ---------- Gerealiseerd werk ---------- */
 .gallery{display:grid;gap:clamp(16px,2vw,26px);grid-template-columns:1fr 1fr}
@@ -361,24 +366,12 @@ img.media{display:block;width:100%;height:auto;border-radius:2px}
 
     <p class="pull">Een mooie vloer begint bij wat je uiteindelijk niet meer ziet.</p>
 
-    <!-- Keurmerken — klein en rustig. AANPASSEN: FOTO — vervang .logo-div door officiële logo's zodra beschikbaar -->
-    <div class="creds">
-      <div class="cred">
-        <span class="logo">Meester&shy;parketteur</span>
-        <span class="t"><b>Meesterparketteur</b><span>Gediplomeerd &amp; erkend</span></span>
-      </div>
-      <div class="cred">
-        <span class="logo">Gilde</span>
-        <span class="t"><b>Nederlands Gilde van Parketteurs</b><span>Lid</span></span>
-      </div>
-      <div class="cred">
-        <span class="logo">VLOK</span>
-        <span class="t"><b>VLOK</b><span>Heldere consumentenvoorwaarden</span></span>
-      </div>
-      <div class="cred">
-        <span class="logo">Bona</span>
-        <span class="t"><b>Bona Gecertificeerd Vakman</b><span>Erkende afwerking</span></span>
-      </div>
+    <p class="km-intro">Gediplomeerd, aangesloten en gecertificeerd:</p>
+    <div class="keurmerken">
+      <div class="km"><img src="images/keurmerk-meesterparketteur.png" width="165" height="120" loading="lazy" decoding="async" alt="Meesterparketteur — lid van het Gilde van Gediplomeerde Parketteurs"></div>
+      <div class="km km-ph">Gilde van Gediplomeerde Parketteurs</div>
+      <div class="km km-ph">VLOK — consumentenvoorwaarden</div>
+      <div class="km"><img src="images/keurmerk-bona.jpg" width="113" height="120" loading="lazy" decoding="async" alt="Bona Gecertificeerd Vakman"></div>
     </div>
   </div>
 </section>
@@ -457,7 +450,7 @@ img.media{display:block;width:100%;height:auto;border-radius:2px}
   <div class="wrap">
     <div><a class="brand" href="#top" style="font-size:1.05rem;text-decoration:none">Gevloerd<b>.nl</b></a>
       &nbsp;·&nbsp; Schagen, Noord-Holland &nbsp;·&nbsp; KvK 51624842</div>
-    <div class="creds-line">Meesterparketteur · Lid Gilde van Parketteurs · VLOK · Bona Gecertificeerd Vakman</div>
+    <div class="creds-line">Meesterparketteur · Lid van het Gilde van Gediplomeerde Parketteurs · VLOK · Bona Gecertificeerd Vakman</div>
   </div>
 </footer>
 
