@@ -169,6 +169,8 @@ img.media{display:block;width:100%;height:auto;border-radius:2px}
 .km{background:#fff;border:1px solid var(--line);border-radius:3px;height:86px;padding:12px 18px;display:flex;align-items:center;justify-content:center}
 .km img{max-height:56px;max-width:180px;width:auto;height:auto;display:block}
 .km-ph{color:var(--ink-soft);font-size:.9rem;text-align:center;max-width:150px;line-height:1.25}
+a.km{text-decoration:none;transition:border-color .2s,transform .2s}
+a.km:hover{border-color:var(--ink);transform:translateY(-2px)}
 
 /* ---------- Gerealiseerd werk ---------- */
 .gallery{display:grid;gap:clamp(16px,2vw,26px);grid-template-columns:1fr 1fr}
@@ -368,10 +370,10 @@ img.media{display:block;width:100%;height:auto;border-radius:2px}
 
     <p class="km-intro">Gediplomeerd, aangesloten en gecertificeerd:</p>
     <div class="keurmerken">
-      <div class="km"><img src="images/keurmerk-meesterparketteur.png" width="165" height="120" loading="lazy" decoding="async" alt="Meesterparketteur — lid van het Gilde van Gediplomeerde Parketteurs"></div>
-      <div class="km"><img src="images/keurmerk-gilde.png" width="156" height="120" loading="lazy" decoding="async" alt="Gilde van Gediplomeerde Parketteurs"></div>
-      <div class="km"><img src="images/keurmerk-vlok.png" width="312" height="120" loading="lazy" decoding="async" alt="VLOK — branchevereniging voor vakmensen"></div>
-      <div class="km"><img src="images/keurmerk-bona.png" width="132" height="140" loading="lazy" decoding="async" alt="Bona Gecertificeerd Vakman"></div>
+      <a class="km" href="https://gildevanparketteurs.nl/meester-parketteur/" target="_blank" rel="noopener noreferrer" title="Meesterparketteurs van het Gilde"><img src="images/keurmerk-meesterparketteur.png" width="165" height="120" loading="lazy" decoding="async" alt="Meesterparketteur — lid van het Gilde van Gediplomeerde Parketteurs"></a>
+      <a class="km" href="https://gildevanparketteurs.nl/" target="_blank" rel="noopener noreferrer" title="Gilde van Gediplomeerde Parketteurs"><img src="images/keurmerk-gilde.png" width="156" height="120" loading="lazy" decoding="async" alt="Gilde van Gediplomeerde Parketteurs"></a>
+      <a class="km" href="https://www.vlok.nl/kluslatenuitvoeren/nakomingsgarantie/" target="_blank" rel="noopener noreferrer" title="VLOK — garantievoorwaarden voor consumenten"><img src="images/keurmerk-vlok.png" width="312" height="120" loading="lazy" decoding="async" alt="VLOK — branchevereniging voor vakmensen"></a>
+      <a class="km" href="https://www.bona.com/nl/consument/" target="_blank" rel="noopener noreferrer" title="Bona Gecertificeerd Vakman"><img src="images/keurmerk-bona.png" width="132" height="140" loading="lazy" decoding="async" alt="Bona Gecertificeerd Vakman"></a>
     </div>
   </div>
 </section>
