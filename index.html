@@ -121,6 +121,9 @@ img.media{display:block;width:100%;height:auto;border-radius:2px}
 .hero-intro{margin-top:2rem;max-width:52ch;font-size:clamp(1.05rem,1.4vw,1.22rem)}
 .hero-meta{margin-top:2.4rem;color:var(--ink-soft);font-size:.98rem;max-width:60ch}
 .hero-fig{margin:clamp(48px,7vw,88px) 0 0}
+.hero-media{width:100%;background:var(--paper-2);border:1px solid var(--line);border-radius:2px;overflow:hidden;display:flex;justify-content:center;align-items:center}
+.hero-media img{display:block;width:100%;height:auto}
+@media(min-width:760px){.hero-media img{width:auto;max-width:100%;height:clamp(440px,72vh,760px)}}
 .reveal{opacity:0;transform:translateY(14px);animation:rise .9s cubic-bezier(.2,.7,.2,1) forwards}
 .reveal.d1{animation-delay:.05s}.reveal.d2{animation-delay:.16s}.reveal.d3{animation-delay:.27s}.reveal.d4{animation-delay:.38s}
 @keyframes rise{to{opacity:1;transform:none}}
@@ -252,8 +255,13 @@ img.media{display:block;width:100%;height:auto;border-radius:2px}
       West-Friesland — voor nieuwe vloeren, renovatie en reparatie.</p>
 
     <figure class="hero-fig reveal d4" style="margin-block-end:0">
-      <!-- AANPASSEN: FOTO — HERO. Groot projectbeeld. Vervang div door <img class="media" ... ZONDER loading="lazy"> -->
-      <div class="ph r-hero" data-label="Hero — groot projectbeeld volgt"></div>
+      <div class="hero-media">
+        <picture>
+          <source srcset="images/hero.webp" type="image/webp">
+          <img src="images/hero.jpg" width="1080" height="936" decoding="async"
+               alt="Jakko Woudenberg legt een visgraat parketvloer, naast een ingelijste reproductie van De Nachtwacht">
+        </picture>
+      </div>
     </figure>
   </div>
 </section>
